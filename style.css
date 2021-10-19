@@ -1,0 +1,211 @@
+/* CSS GRID WESBITE */
+
+:root {
+	--light: #fff;
+	--semi: #e9f5d6;
+	--lime: #b3d78a;
+	--dark: #000000;
+	--teal: #35809e;
+}
+
+html {
+	font-family: 'Roboto Mono', monospace;
+  font-weight: lighter;
+	color: var(--dark);
+}
+
+body {
+	margin: 4% 5%; /*tb -- lr*/
+}
+
+img {
+	max-width: 100%;
+}
+
+nav{
+	background-color: #ffffff;
+}
+
+ul {
+	display: grid;
+	grid-gap: 15px;
+	padding: 0;
+	list-style: none;
+	grid-template-columns: repeat(5, 1fr);
+  text-align: right;
+}
+
+ul a {
+	color: var(--dark);
+	font-size: 1rem;
+	text-decoration: none;
+	padding: .8rem;
+	text-align: center;
+}
+
+ul a:hover {
+	color: var(--lime);
+}
+
+a#selected {
+  color: var(--teal)
+}
+
+#container {
+	display: grid;
+	grid-gap: 18px;
+
+
+}
+
+.text {
+	margin-top: 0 ;
+	margin-bottom: 0;
+}
+
+.title {
+	font-size: 1.4rem;
+	color: var(--lime);
+
+}
+
+.top {
+	display: grid;
+  grid-gap: 15px;
+  margin-top: 5%;
+	grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+	"a b c"
+	"d d d"
+}
+#pic1 {
+	grid-area: a;
+}
+
+#pic2 {
+	grid-area: b;
+}
+
+
+#pic3 {
+	grid-area: c;
+}
+
+#words1 {
+	grid-area: d;
+	padding: 1rem;
+	color: #000000
+	;
+}
+
+.middle {
+	display: grid;
+	  grid-gap: 15px;
+  margin-top: 4%;
+	padding: 1rem;
+	grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+
+	"z z z z"
+	"f e h g"
+	"i e j g"
+	"i k j l"
+	"m m m m"
+}
+
+#middletitle {
+	grid-area: z;
+}
+
+#pic4 {
+	grid-area: e;
+}
+
+#pic5 {
+	grid-area: f;
+}
+
+#pic6 {
+	grid-area: g;
+/*	background-color: #f8a379;
+	color: pink; */
+}
+
+#pic7 {
+	grid-area: h;
+}
+
+
+
+
+.words2 {
+	grid-area: i;
+	color: var(--teal);
+}
+
+.words3 {
+	grid-area: j;
+	color: var(--teal);
+}
+
+.words4 {
+	grid-area: k;
+	color: var(--teal);
+}
+
+.words5 {
+	grid-area: l;
+	color: var(--teal);
+}
+
+
+
+footer {
+	grid-area: m;
+	margin-top: 2rem;
+	background: var(--semi);
+	color: var(--dark);
+	text-align: center;
+	padding: .5rem;
+}
+
+@media(max-width: 700px) {
+	ul {
+		grid-template-columns: 1fr;
+		text-align: center;
+
+	}
+
+ 	.top {
+		grid-template-columns: repeat(3, 1fr);
+		/*grid-template-rows: 15% 20% 20% 20% 30% 20% 20% 8%; /*height of rows */
+		grid-template-areas:
+			"a b c"
+			"d d d"
+
+
+		}
+
+		img {
+			width: 100%;
+		}
+
+	.middle {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+		"z z"
+		"f i"
+		"e k"
+		"h j"
+		"g l"
+		"m m"
+	}
+}
+
+/*
+"z z z z"
+"f e h g"
+"i e j g"
+"i k j l"
+"m m m m"
+*/
